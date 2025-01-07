@@ -1,0 +1,15 @@
+- To Build Docker File => Image
+  docker build  -t (name of Image) .
+
+- Create Container from Image
+  docker run --name (name Container ) -d -p(port of your michine:port of Container) (name of Image)
+
+- To retrive all Images 
+  docker image ls
+
+- To retrive all runinng Container
+  docker ps
+
+- To remove Container
+  doceker rm (name of Container) -f
+
