@@ -4,6 +4,9 @@
 - Create Container from Image
   docker run --name (name Container ) -d -p(port of your michine:port of Container) (name of Image)
 
+- Create Container with hot relod
+   docker run --name (name Container ) -v(path of folser on your machine:folder on Container) -d -p(port of your michine:port of Container) (name of Image)   
+
 - To retrive all Images 
   docker image ls
 
@@ -19,4 +22,3 @@
 - To get Logs of Container
   doceker logs (name of Container)
 
-  
