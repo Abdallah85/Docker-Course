@@ -13,3 +13,10 @@
 - To remove Container
   doceker rm (name of Container) -f
 
+- To open terminal in Container
+  docker exec -it (name of Container) bash
+
+- To get Logs of Container
+  doceker logs (name of Container)
+
+  
