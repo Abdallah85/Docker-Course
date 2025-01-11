@@ -4,7 +4,7 @@
 - Create Container from Image
   docker run --name (name Container ) -d -p(port of your michine:port of Container) (name of Image)
 
-- Create Container with hot relod
+- Create Container with hot relod without readonly
    docker run --name (name Container ) -v(path of folser on your machine:folder on Container) -d -p(port of your michine:port of Container) (name of Image)   
 
 - To retrive all Images 
@@ -22,3 +22,11 @@
 - To get Logs of Container
   doceker logs (name of Container)
 
+* Docker Volumes :
+
+-There Two Types Of Volumes:
+(1) Bind Mount Volume use to map folders (Hot Relod)
+ docker run --name (name Container ) -v(path of folser on your machine : folder on Container):ro -d -p(port of your michine:port of Container) (name of Image)   
+
+(2) Anonymous Volume use to store any thing
+ docker run --name (name Container ) -v(path of folser on your machine : folder on Container):ro -v(path of store object on Container)  -d -p(port of your michine:port of Container) (name of Image)   

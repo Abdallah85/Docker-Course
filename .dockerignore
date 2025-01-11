@@ -1,4 +1,5 @@
 /node_modules
+.gitignore
 commands.txt
 Dockerfile
 package-lock.json
