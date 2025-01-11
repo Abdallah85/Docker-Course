@@ -30,3 +30,15 @@
 
 (2) Anonymous Volume use to store any thing
  docker run --name (name Container ) -v(path of folser on your machine : folder on Container):ro -v(path of store object on Container)  -d -p(port of your michine:port of Container) (name of Image)   
+
+
+
+
+
+* Docker Compose
+
+- to run Compose file :
+  docker-compose up -d (if there only one docker-compose)
+
+- to off compose file :
+  docker-compose down -d (if there only one docker-compose)
