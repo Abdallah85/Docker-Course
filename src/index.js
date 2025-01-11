@@ -1,5 +1,9 @@
 const express = require("express");
+const dotenv = require("dotenv");
+dotenv.config();
+
 const app = express();
+const PORT = process.env.PORT || 4000;
 
 app.get("/", (req, res) => {
   res.send("Hello Abdallah From Egypt and this is my first Node.js App ohhh");
@@ -21,6 +25,6 @@ app.get("/services", (req, res) => {
   res.send("I am a full stack developer fffff");
 });
 
-app.listen(4000, () => {
-  console.log("Server is running on port 4000");
+app.listen(PORT, () => {
+  console.log(`Server is running in ${process.env.NODE_ENV} and on port: ${PORT}`);
 });

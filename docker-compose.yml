@@ -6,3 +6,17 @@ services:
       - ./src:/app/src:ro
     ports:
       - "4000:4000"
+    env_file:
+      - ./.env
+
+
+
+## this way you can set environment variables in the docker-compose.yml file
+##    environment:
+##      - PORT=4000
+##      - NODE_ENV=development
+
+
+## this way you can set environment variables in the .env file
+##    env_file:
+##      - ./.env
