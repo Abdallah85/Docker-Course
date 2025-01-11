@@ -1,0 +1,11 @@
+services:
+  node-app:
+    container_name: express-app
+    volumes:
+      - ./src:/app/src:ro
+    environment:
+      - NODE_ENV=development
+
+
+
+# this is the docker-compose.dev.yml file
