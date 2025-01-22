@@ -8,5 +8,4 @@ services:
       - ./src:/app/src:ro
     environment:
       - NODE_ENV=development
-    command: npm run dev
 # this is the docker-compose.dev.yml file

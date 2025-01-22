@@ -1,11 +1,31 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const mongoose = require("mongoose");
+const redis = require("redis");
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 const NODE_ENV = process.env.NODE_ENV || "none";
 
+const userName = "root";
+const password = "example";
+const port = "27017";
+const host = "mongo";
+const MONGO_URL = `mongodb://${userName}:${password}@${host}:${port}`;
+const hostRedis = 'redis';
+
+mongoose
+  .connect(MONGO_URL)
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+redis.createClient({
+  url: `redis://${hostRedis}:6380`,
+});
 app.get("/", (req, res) => {
   res.send("Hello Abdallah From Egypt and this is my first Node.js App ohhh");
 });
